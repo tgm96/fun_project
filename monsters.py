@@ -1,6 +1,6 @@
 import random
 import time
-from player import Player
+import player
 
 def selector(move):
     if move == "punch":
@@ -186,7 +186,7 @@ class Skeleton():
                 damage = random.randint(15, 25)
                 time.sleep(1)
 
-                if Player.has_shield:
+                if player.Player.has_shield:
                     block = Player.block()
                     if block:
                         print("you block the stab with your shield\n")
@@ -208,7 +208,7 @@ class Skeleton():
                 damage = random.randint(25, 35)
                 time.sleep(1)
 
-                if Player.has_shield:
+                if player.Player.has_shield:
                     block = Player.block()
                     if block:
                         print("you block the slash with your shield\n")
