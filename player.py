@@ -20,8 +20,6 @@ def selector(move):
 
 class Player:
 
-    has_shield = False
-
     def __init__(self, name):
         self.name = name
         self.hp = 100
@@ -29,6 +27,7 @@ class Player:
         self.potions = 3
         self.stunned = False
         self.has_armour = False
+        self.has_shield = False
         self.armour_value = 0
         self.shield_value = 0
 
