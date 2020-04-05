@@ -13,6 +13,9 @@ time.sleep(0.2)
 player.welcome_player()
 
 while True:
+    
+    # the reason this section is commented out is because testing the block feature got tiring when having to fight two monsters first...
+    
     """
     fights.fight_brute(player)
     if player.hp < 1:
