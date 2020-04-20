@@ -174,7 +174,7 @@ class Skeleton():
     def update_hp(self, pl_dam):
         self.hp -= pl_dam
 
-    def attack(self):
+    def attack(self, player):
         damage = 0
         choice = random.randint(0, 1)
         time.sleep(1)
@@ -186,8 +186,8 @@ class Skeleton():
                 damage = random.randint(15, 25)
                 time.sleep(1)
 
-                if player.Player.has_shield:
-                    block = Player.block()
+                if player.has_shield:
+                    block = player.block()
                     if block:
                         print("you block the stab with your shield\n")
                         return {"damage": damage, "move_type": "stab", "blocked": True}
@@ -208,8 +208,8 @@ class Skeleton():
                 damage = random.randint(25, 35)
                 time.sleep(1)
 
-                if player.Player.has_shield:
-                    block = Player.block()
+                if player.has_shield:
+                    block = player.block()
                     if block:
                         print("you block the slash with your shield\n")
                         return {"damage": damage, "move_type": "slash", "blocked": True}

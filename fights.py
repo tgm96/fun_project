@@ -109,7 +109,7 @@ def fight_skeleton(player):
         if player.stunned == True:
                 player.stunned = False
 
-        move = monster.attack()
+        move = monster.attack(player)
 
         if move["move_type"] == "stab":
             if move["blocked"] == True:
