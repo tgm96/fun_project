@@ -13,7 +13,7 @@ time.sleep(0.2)
 player.welcome_player()
 
 while True:
-    """
+
     fights.fight_brute(player)
     if player.hp < 1:
         break
@@ -27,7 +27,7 @@ while True:
     fights.fight_dragon(player)
     if player.hp < 1:
         break
-    """
+
     choices.bodies(player)
     
     fights.fight_skeleton(player)
